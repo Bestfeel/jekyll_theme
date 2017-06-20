@@ -1,0 +1,146 @@
+# 目录结构
+source:       .
+destination:  ./_site
+plugins_dir:      ./_plugins
+layouts_dir:      ./_layouts
+paginate:     8  #  分页
+
+# 阅读处理
+safe:         false
+include:      [".htaccess"]
+exclude:      []
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+textile_ext:  "textile"
+
+
+# 内容过滤
+show_drafts:  null
+limit_posts:  0
+future:       true
+unpublished:  false
+
+# 转换
+markdown:     kramdown
+highlighter:  pygments    #  代码高亮，pygments,Rouge
+lsi:          false
+excerpt_separator: "\n\n"
+
+# 服务器选项
+detach:       false
+port:         4000
+host:         127.0.0.1
+baseurl:      "" # does not include hostname
+
+
+
+# 输出
+permalink: /:categories/:year/:month/:day/:title.html
+#permalink:     date
+#paginate_path: blog/page:num
+#timezone:      null
+
+# 插件
+whitelist: []
+gems: [jekyll-paginate]
+#gems: [jekyll-paginate,jekyll-coffeescript, jekyll-watch, jekyll-assets]
+
+# Markdown 处理器
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+
+
+#Site config
+title:  gizwits issues
+subtitle: 知识从未如此性感
+description:  java  | python | javascript| linux | Machine Learning|go
+keywords: java  | python | javascript| linux | Machine Learning|go
+url: 
+feed: /atom.xml
+favicon: http://jekyllrb.com/favicon.png
+
+#Nav config
+nav:
+  - text: 首页
+    url: /index.html
+  - text: 分类目录 
+    url: /categories.html
+  - text: 文章归档
+    url: /archives.html
+  - text: 联系我们
+    url: /contact.html
+  - text: 友情链接
+    url: /links.html
+
+#Author config
+author:
+    name: gizwits
+    imageLink: http://tp2.sinaimg.cn/1832671293/180/40020872447/1
+    simpleIntro: 我是知识的小精灵
+    detailIntro:
+      <p>这里是机智云大数据与人工智能的知识与问答的社区</p>
+     
+
+#Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
+# follow:
+#   - class: icon-rss
+#     url: /atom.xml
+  # - class: icon-weibo
+  #   url: http://weibo.com/pizn
+  # - class: icon-renren
+  #   url: http://renren.com
+  # - class: icon-github-alt
+  #   url: https://gitlab.gizwits.com/groups/gizwits-bigdata
+  # - class: icon-twitter
+  #   url: http://twitter.com/piznlin
+  # - class: icon-google-plus
+  #   url: http://google.com
+
+#Links
+customLinks:
+  - item:
+    - text: feel‘s blog
+      url: https://www.feel88.cn
+    - text: gizwits
+      url: http://www.gizwits.com
+    - text: gizwits_bigdata
+      url: https://gitlab.gizwits.com/groups/gizwits-bigdata
+    - text: gizwits_ml
+      url: https://gitlab.gizwits.com/groups/gizwits_ml
+    message: Friends
+  # - item:
+  #   - text: Font Awesome
+  #     url: http://fortawesome.github.io/Font-Awesome/
+  #   - text: Google Font
+  #     url: http://www.google.com/fonts/
+  #   - text: jQuery
+  #     url: http://jquery.com/
+  #   message: 其他相关链接
+
+#googleAnaly, your id link UA-12345678-X
+# googleAnaly:
+#   config: true
+#   id: UA-40169250-1
+
+#comment config
+# disqus:
+#   config: false
+#   id: piznblog
+
+duoshuo:
+  config: true
+  id: feel
